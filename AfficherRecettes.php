@@ -1,10 +1,24 @@
-<?php 
-//Déclaration du tableau des recettes
-$recipes=[
-    ['Cassoulet','[...]','mickael.andrieu@exemple.com',true,],
-    ['Couscous','[...]','mickael.andrieu@exemple.com',false,],
+<?php
+    $recipes=[
+        [
+            'title'=>'Cassoulet',
+            'recipe'=>'',
+            'author'=>'mickael.andrieu@exemple.com',
+            'is_enabled'=> true,],
+        [
+            'title'=>'Couscous',
+            'recipe'=>'',
+            'author'=>'mickael.andrieu@exemple.com',
+            'is_enabled'=> false,
+        ],
+        [
+            'title'=>'Escalope milanaise',
+            'recipe'=>'',
+            'author'=>'mathieu.nebra@exemple.com',
+            'is_enabled'=> true,
+        ]
     ];
-    ?>
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,11 +27,11 @@ $recipes=[
     </head>
     <body>
         <ul>
-            <?php for($lines=0;$lines<=1;$lines++): ?>
-                <li>
-                    <?php echo $recipes[$lines][0].'('.$recipes[$lines][2].')';?>
-                </li>
-            <?php endfor;?>
+            <?php 
+                foreach($recipes as $recipe) {
+                        echo $recipe['title'].' auteur : '. $recipe['author'].'<br>';
+                }
+            ?>
         </ul>
     </body>
 </html>
