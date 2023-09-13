@@ -1,3 +1,4 @@
+<?php session_start();?>
 <?php
 
 //Validation du formulaire
@@ -5,6 +6,8 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     foreach ($users as $user) {
         if ($user['email']=== $_POST['email'] && $user['password'] === $_POST['password']) {
             $loggedUser = ['email' => $user['email'],];
+            $_SESSION['LOOGED_USER']=$user['email'];
+
         } else {
             $errorMessage = sprintf('Les informations envoyées ne permettent pas de vous identifier : (%s/%s)', $_POST['email'], $_POST['password']);
         }
