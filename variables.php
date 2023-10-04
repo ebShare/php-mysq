@@ -6,19 +6,19 @@ $users = [
         'full_name' => 'Mickaël Andrieu',
         'email' => 'mickael.andrieu@exemple.com',
         'age' => 34,
-        'password'=> 'MA34',
+        'password' => 'S3cr3t'
     ],
     [
         'full_name' => 'Mathieu Nebra',
         'email' => 'mathieu.nebra@exemple.com',
         'age' => 34,
-        'password'=> 'MN34',
+        'password' => 'devine'
     ],
     [
         'full_name' => 'Laurène Castor',
         'email' => 'laurene.castor@exemple.com',
         'age' => 28,
-        'password'=> 'LC28',
+        'password' => 'P4ssW0rD'
     ],
 ];
 
