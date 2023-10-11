@@ -19,6 +19,7 @@
 
     <!-- Inclusion des fichiers utilitaires -->
     <?php 
+        include_once('mysql.php');
         include_once('variables.php');
         include_once('functions.php');
     ?>

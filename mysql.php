@@ -12,8 +12,16 @@ try{
     MYSQL_PASSWORD);
     $db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 }          
-catch(Exception          $exception)
+catch(Exception $exception)
 {
     die('Erreur :'.$exception->getMessage());
 }
+?>
+
+<?php
+//On récupère tout le contenu de la table recipes
+$sqlQuery='SELECT * FROM recipes WHERE is_enabled=true';
+$recipesStatement=$db->prepare($sqlQuery);
+$recipesStatement->execute();
+$recipes=$recipesStatement->fetchAll();
 ?>

@@ -22,7 +22,7 @@ $users = [
     ],
 ];
 
-$recipes = [
+/*$recipes = [
     [
         'title' => 'Cassoulet',
         'recipe' => '',
@@ -48,3 +48,4 @@ $recipes = [
         'is_enabled' => false,
     ],
 ];
+*/
